@@ -1,0 +1,199 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{lipsum}
+\usepackage[yyyymmdd]{datetime}
+\newdateformat{defaultdate}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
+\usepackage[top=2cm, left=2cm, right=2cm, bottom=3cm, includefoot]{geometry}
+\usepackage{hyperref}
+\let\chead\relax
+\let\cfoot\relax
+\usepackage{fancyhdr}
+\usepackage{tocloft}
+\hypersetup{
+    colorlinks,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black,
+    urlcolor=black,
+    linktoc=all,
+}
+\usepackage[ % RL logo bg image
+    firstpage=true,
+    contents={
+        \includegraphics[width=9mm]{images/logo_green.png}
+    },
+    placement=bottom,
+    position={current page.south east},
+    hshift=-6.3mm,
+    vshift=1mm,
+    nodeanchor={south east},
+    opacity=0.25
+]{background}
+\usepackage[style=numeric]{biblatex}
+\addbibresource{./rhine.bib}
+
+% \renewcommand{\cftpartleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}} % make dots in toc
+
+\providecommand{\keywords}[1]{\small\begin{center}\bfseries\textit{Keywords}\vspace{-1em}\vspace{0pt}\end{center}#1} % keywords style
+\renewenvironment{abstract}{\small\begin{center}\bfseries\textit{\abstractname}\vspace{-1em}\vspace{0pt}\end{center}\list{}{\setlength{\leftmargin}{-0.05\textwidth}\setlength{\rightmargin}{0em}}\item\relax}{\endlist} % abstract style
+
+\date{} % leave empty :3
+\begin{document}
+
+\title{Rhine Lab themed paper template \\\large all content(text) copied from fandom}
+
+%% header/footer start
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{%
+    \defaultdate{\today}\\
+    \defaultdate{\formatdate{23}{4}{1083}}% << leave that % here
+}
+\fancyhead[L]{\includegraphics[width=15mm]{images/rl_logo_inverted.png}}
+\fancyfoot[C]{\thepage}
+%% header/footer end
+
+\author{ % authors extracolsep if few authors or should not look too centered
+    \begin{tabular}[t]{c c c c c} % @{\extracolsep{15em}} 
+        Olivia Silence & Muelsyse & Dr. Elna Urbica & Nasti Lundrey & Dorothy Franks \\
+        % Rhine Lab & Rhine Lab & ---\\
+        STRU & ECO & NRG & ENG & ORIG \\ 
+    \end{tabular}
+}
+\setlength{\headheight}{3em} % header height
+
+\begin{titlepage}
+    \let\endtitlepage\relax
+    
+    \maketitle
+    
+    \begin{minipage}[t]{0.70\textwidth} % minipage for the abstract taking up 65% of the page on the left
+        \begin{abstract}
+            Rhine Lab LLC. (R.L.) is a Terran organization. It is a Columbian research institute and scientific consortium that is active in the fields of Originium, biology, and robotics, but has been marred with shady practices involving unethical, inhumane experiments. Nevertheless, it has a grand ambition to become Terra's pioneer in space expedition.
+        \end{abstract}
+    \end{minipage}%
+    \hfill
+    \begin{minipage}[t]{0.25\textwidth} % minipage for the keywords taking up 25% of the page on the right
+    \keywords{\raggedright
+        Originium,
+        Epidemiology,
+        Pharmacology,
+        Vaccine,
+        Bioethics(pun intended),
+        Bioinformatics,
+        Cellular Biology
+    }
+    \end{minipage}
+    
+    \tableofcontents % depends on the paper size ig
+    \thispagestyle{fancy}
+    \nopagebreak
+\end{titlepage}
+
+
+
+
+
+\begin{multicols}{2}
+
+\section{Background}
+    Rhine Lab was founded by Dr. Kristen Wright and Saria in the year 1083 with the purpose of seeking scientific advancements and following the legacy of the former's parents in exploring space beyond Terra. R.L. came from humble beginnings with its first office being an old apartment near the founders' former college, the Trimounts Institute of Technology.\cite{1} R.L. eventually became one of Terra's biggest scientific organizations, famous throughout Terra for its Originium-related research and its uses in robotics, medicine, and ecological studies. It eventually upgraded into an LLC. in 1085, and through collaboration with the Maylander Association, began attracting more researchers to join the company. Kristen Wright became the Director of the Component Controls section and head of R.L. as a whole, while Saria took up the position as chief of the Defense section. Along with its scientific endeavors, the Maylander Association also helped R.L. start the Rhine Lab Pioneer Project: a series of archeological expedition programs to uncover ancient ruins, many of which actually belonged to the previous civilizations which once colonized Terra.
+
+    However, R.L. eventually became involved in ethically questionable research, which it has simply deemed "unavoidable." The company accepts funding from the Columbian Department of Defense (DOD) as part of the nation's goal to achieve technological superiority over other Terran superpowers. For example, in order to decode the secrets of Originium, Joyce was chosen to have an Originium chip implanted inside her brain, but this came at the cost of her contracting severe Oripathy, along with other illnesses.\cite{2} R.L. even secretly invested in the infamous Loken Watertank Laboratory, inheriting much of its legacy after its downfall by accepting its remaining research data and subjects.\cite{3} It continues to use the façade of appearing as an institution of academic freedom to attract researchers while disguising its true intentions.
+
+    Of all the experiments R.L. has conducted, "Project Digbolic," launched in the year 1095, was its most defining. Under the supervision of the DOD, it acted as an investment partner for Haydn Pharmaceutical, which attempted to create a humanoid weapon by resurrecting the extinct Diablo Sarkaz.\cite{4} The result, however, was a series of devastating events known as the "Digbolic Crisis". It began with Ifrit, the experiment's test subject, losing control of her Arts and burning down laboratory Lab-1, killing its director Haydn Ramt. Following the destruction of Lab-1, R.L. secretly continued the project under the supervision of Prof. Ahrens Parvis, by disguising it as therapy for Ifrit, intended to relieve the symptoms of her Oripathy. R.L. eventually failed to suppress Ifrit's rage, which almost led to the destruction of the lab and the subject's death.\cite{5} Since then, R.L. has concealed all details concerning the Crisis, and announced publicly that the incident was nothing more than an experimental accident. 
+
+    R.L.'s inhumane experiments, as well as the disastrous Digbolic Crisis, have led two of its members, Dr. Olivia Silence and its co-founder, Saria, to leave R.L., though their positions are still nominally retained by Kristen. Even then, R.L. continues to supervise the two to prevent them from harming its interests; it also observes Ifrit in secret. At the same time, it has partnered with Rhodes Island to conduct research on Oripathy, while admitting to R.I.'s superiority in this field of research. Magallan, Mayer, and their superior Muelsyse are some of its members lending their services to R.I.
+
+    In November 21, 1099, the "Project Horizon Arc“ was officially launched as part of R.L.'s collaboration with the DOD. Originally a superweapons program with the purpose of constructing Arc-01, it was soon hijacked by R.L. itself as part of Kristen's ultimate lifetime goal. In the end, R.L. succeeded in penetrating the Starpod—the "fake sky" of Terra—and created a unique phenomenon named the "Trimount Arc" by later generations. Despite R.L. ultimately losing Kristen, the event became the current generation of Terra's first attempt to fly beyond the Starpod, marking the very beginning of space expedition in the current era. 
+
+\section{Branches}
+\subsection{Departments}
+    R.L. has ten departments in total with each performing different tasks. The core of R.L. is the Component Control Section (CMPT CTRL) that deals with the general affairs within R.L. among all departments. Beneath the Control Section are five scientific research sections and four general affair sections: 
+\subsubsection{Scientific research}
+    \begin{itemize}
+        \item Ecological Section (ECO): The department that investigates the biological evolution history of Terra and its interaction with Terra's environment.
+        \item Energy Section (NRG): The department that conducts research on various forms of energies in Terra (i.e., Originium, sunlight, geothermal, and biothermal) and their practical applications in technology.
+        \item Originium Arts Section (ORIG): The department that dives into the basic principles of Originium Arts and its applications.
+        \item Scientific Investigation Section (SCIEN): The department consisting of explorers that reach outside of the borders of civilization on Terra (i.e., Sami Icefield) to investigate its mysteries and uncover relics of Terra's previous civilizations. The S.I.S. is the leader of R.L.'s Pioneer Project.
+        \item Structural Section (STRU): The department that investigates the basic particles (i.e., elements, atoms, and biological molecules) of living beings on Terra and how they are affected by their surroundings.
+    \end{itemize}
+
+\subsubsection{General affair}
+    \begin{itemize}
+        \item Business Section (BSN): The department that deals with public affairs and communications with other corporations.
+        \item Defense Section (DEF): The department that deals with R\&D and security issues such as laboratory emergencies. It also takes care of undisclosed and classified information.
+        \item Engineering Section (ENG): The department that provides mechanical and robotic support for R.L.'s researchers.
+        \item Human Resource Investigation Section (HRI): The department that is responsible for human resource management.
+    \end{itemize}
+
+\section{Notable members}
+
+\begin{itemize}
+    \item \href{https://arknights.fandom.com/wiki/Andrenette_Mariam}{Andrenette Mariam}
+    \item Dellareed: A R.L. researcher who studied the possibility of integrating Originium with computers and the organic mind through a direct neural interface, as well as Joyce's friend. She passed away at some point from unknown causes, leading to her project's team disbandment. Della's death led to Joyce voluntarily implanting an Originium-based DNI named "Device \#9" into her brain to remember her and prove her theories.\cite{6}
+    \item Albert (\href{https://arknights.fandom.com/wiki/Rhodes_Island%27s_Records_of_Originium/Rhine_Lab}{Rhodes Island's Records of Originium: Rhine Lab})
+    \item Lammy (\href{https://arknights.fandom.com/wiki/Rhodes_Island%27s_Records_of_Originium/Rhine_Lab}{Rhodes Island's Records of Originium: Rhine Lab})
+    \item Leon (\href{https://arknights.fandom.com/wiki/Rhodes_Island%27s_Records_of_Originium/Rhine_Lab}{Rhodes Island's Records of Originium: Rhine Lab})
+    \item Jane (\href{https://arknights.fandom.com/wiki/Rhodes_Island%27s_Records_of_Originium/Rhine_Lab}{Rhodes Island's Records of Originium: Rhine Lab})
+\end{itemize}
+
+Of the above characters:
+
+\begin{itemize}
+    \item Kristen Wright is the director of Rhine Lab while Saria is one of R.L.'s co-leaders.
+    \begin{itemize}
+        \item Despite having resigned of her own accord following the "Diabolic Crisis," Saria's resignation was never recognized, and thus she nominally remains a member of R.L.
+        \item Following the Project Horizon Arc where Kristen is declared "missing," Saria succeeds her as the director of R.L..
+    \end{itemize}
+    \item Much of the R.L. section directors' offices underwent huge changes in the aftermaths of the the Site 359 incident and the Project Horizon Arc, except for Dorothy, Muelsyse, Nasti, and Justin Jr., who maintained their respective positions\cite{7}:
+    \begin{itemize}
+        \item Ahrens passed away during his Chimera Treatment experiment while Jara has retired following the Project Horizon Arc, with unnamed successors assuming their positions.
+        \item Ferdinand temporarily left his office in the aftermath of the Site 359 incident, but was pardoned and assumed his office again after the Project Horizon Arc.
+        \item Andrenette remains missing in action during an expedition in the Infy Icefield.
+    \end{itemize}
+    \item Astgenne, Magallan, and Mayer are actively working for and represent R.L., whereas Silence and Ptilopsis only work for R.L. nominally after they unofficially resigned following the "Diabolic Crisis."
+    \begin{itemize}
+        \item Silence the Paradigmatic has officially returned to R.L. as Saria's secretary and a supervisor representing the newly founded Trimounts Science Ethics Association.
+    \end{itemize}
+\end{itemize}
+
+\section{Trivia}
+\begin{itemize}
+    \item It is named after the Rhine River, yet it is based in Columbia, Terra's analogue to the United States.
+    \item All playable Rhine Lab operators have been of the 5-star or the 6-star status.
+    \item R.L.'s logo resembles Arduino's, albeit flipped and slightly modified.
+    \begin{itemize}
+        \item According the the illustrator NoriZC, the logo was originally meant to be resembling an owl with <> representing its beak, which was later removed for artistic reason.
+    \end{itemize}
+    \item All R.L. operators designed by NoriZC are based on elements, as seen sometimes on the artist's personal merch.
+    \begin{itemize}
+        \item Ifrit is themed around fire.
+        \item Saria is themed around earth.
+        \item Silence is themed around grass.
+        \item Muelsyse is themed around water.
+        \item Mayer and Magallan are themed around the sun and the moon respectively\cite{8}.
+    \end{itemize}
+    \item Because of their close relationship, the R.L. operators are given the nickname "the Rhine Lab Family" by the Arknights community. 
+    \begin{itemize}
+        \item Saria is viewed as a strict father due to her nature as well as her racial traits. There are some fan arts where she is instead a silly father who teaches Ifrit all the wrong\item things and/or unintentionally injures her, which results in Silence punishing Saria in various comical ways.
+        \item Silence is viewed as a distant mother. Occasionally, the CN community view the relationship between Silence and Saria as divorced parents.
+        \item Ifrit is the super naughty child in the "family" that often creates troubles.
+        \item Ptilopsis, Mayer and Muelsyse are Ifrit's "aunts."
+        \item Magallan is treated as Ifrit's niece. The EN community tends to view her as another aunt.
+        \item Kristen is viewed as Saria's "ex" by some in the CN community.
+    \end{itemize}
+    \item R.L. draws similarities to the Umbrella Corporation in Resident Evil and/or Black Mesa in Half-Life, particularly their questionable scientific activities.
+    \item The date of the "Project Horizon Arc," Novermber 21st, is the date in our world in which the first hot air balloon travel was ever launched by Jean-François Pilâtre de Rozier and François Laurent d'Arlandes, a monumental beginning of mankind's aviation research\cite{9}.
+\end{itemize}
+
+\lipsum[]
+
+\raggedright\printbibliography[heading=bibintoc]
+
+\end{multicols}
+\end{document}
