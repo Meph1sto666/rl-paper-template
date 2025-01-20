@@ -1,3 +1,7 @@
+%%%%%%%%%%%%%%%%%%%%%%%
+%% ©Meph1sto666 2025 %%
+%%%%%%%%%%%%%%%%%%%%%%%
+
 \documentclass[12pt]{article}
 \usepackage[T1]{fontenc}
 \usepackage{mathptmx}
@@ -5,7 +9,7 @@
 \usepackage{multicol}
 \usepackage{lipsum}
 \usepackage[yyyymmdd]{datetime}
-\newdateformat{defaultdate}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
+\newdateformat{defaultdate}{\THEYEAR/\ifthenelse{\THEMONTH<10}{0\THEMONTH}{\THEMONTH}/\ifthenelse{\THEDAY<10}{0\THEDAY}{\THEDAY}}
 \usepackage[top=2cm, left=2cm, right=2cm, bottom=3cm, includefoot]{geometry}
 \usepackage{hyperref}
 \let\chead\relax
@@ -14,7 +18,7 @@
 \usepackage{tocloft}
 \hypersetup{
     colorlinks,
-    citecolor=black,
+    citecolor=blue,
     filecolor=black,
     linkcolor=black,
     urlcolor=black,
@@ -44,27 +48,49 @@
 \date{} % leave empty :3
 \begin{document}
 
-\title{Rhine Lab themed paper template \\\large all content(text) copied from fandom}
+\title{\vspace{-1em}Rhine Lab themed paper template \\\large all content(text) copied from fandom}
 
-%% header/footer start
+%% header/footer definitions
+\fancypagestyle{titlepage}{% title page header
+    \fancyhf{}%
+    \fancyhead[L]{\includegraphics[width=16mm]{images/rl_logo_inverted.png}}
+    \fancyhead[R]{%
+        \scriptsize Received: \defaultdate{\formatdate{8}{4}{1083}}\\
+        \scriptsize Accepted: \defaultdate{\formatdate{23}{4}{1083}}\\
+        \scriptsize Published: \defaultdate{\today}% << leave that % here if you keep the line
+    }
+    \fancyfoot[C]{\thepage}
+    \setlength{\headheight}{3em} % header height
+}
+
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[R]{%
-    \defaultdate{\today}\\
-    \defaultdate{\formatdate{23}{4}{1083}}% << leave that % here
-}
-\fancyhead[L]{\includegraphics[width=15mm]{images/rl_logo_inverted.png}}
+\fancyhead[L]{\includegraphics[width=16mm]{images/rl_logo_inverted.png}}
 \fancyfoot[C]{\thepage}
+\setlength{\headheight}{3em} % header height
 %% header/footer end
 
-\author{ % authors extracolsep if few authors or should not look too centered
-    \begin{tabular}[t]{c c c c c} % @{\extracolsep{15em}} 
-        Olivia Silence & Muelsyse & Dr. Elna Urbica & Nasti Lundrey & Dorothy Franks \\
-        % Rhine Lab & Rhine Lab & ---\\
-        STRU & ECO & NRG & ENG & ORIG \\ 
-    \end{tabular}
+\author{
+    Olivia Silence\\
+    STRU\\
+    olivia.silence@stru.rl
+    \and
+    Muelsyse\\
+    ECO\\
+    muelsyse@eco.rl
+    \and
+    Dr. Elna Urbica\\
+    NRG\\
+    elna.urbica@nrg.rl
+    \and
+    Nasti Lundrey\\
+    ENG\\
+    nasti.lundrey@eng.rl
+    \and
+    Dorothy Franks\\
+    ORIG\\
+    dorothy.franks@orig.rl
 }
-\setlength{\headheight}{3em} % header height
 
 \begin{titlepage}
     \let\endtitlepage\relax
@@ -90,7 +116,7 @@
     \end{minipage}
     
     \tableofcontents % depends on the paper size ig
-    \thispagestyle{fancy}
+    \thispagestyle{titlepage}
     \nopagebreak
 \end{titlepage}
 
@@ -105,9 +131,9 @@
 
     However, R.L. eventually became involved in ethically questionable research, which it has simply deemed "unavoidable." The company accepts funding from the Columbian Department of Defense (DOD) as part of the nation's goal to achieve technological superiority over other Terran superpowers. For example, in order to decode the secrets of Originium, Joyce was chosen to have an Originium chip implanted inside her brain, but this came at the cost of her contracting severe Oripathy, along with other illnesses.\cite{2} R.L. even secretly invested in the infamous Loken Watertank Laboratory, inheriting much of its legacy after its downfall by accepting its remaining research data and subjects.\cite{3} It continues to use the façade of appearing as an institution of academic freedom to attract researchers while disguising its true intentions.
 
-    Of all the experiments R.L. has conducted, "Project Digbolic," launched in the year 1095, was its most defining. Under the supervision of the DOD, it acted as an investment partner for Haydn Pharmaceutical, which attempted to create a humanoid weapon by resurrecting the extinct Diablo Sarkaz.\cite{4} The result, however, was a series of devastating events known as the "Digbolic Crisis". It began with Ifrit, the experiment's test subject, losing control of her Arts and burning down laboratory Lab-1, killing its director Haydn Ramt. Following the destruction of Lab-1, R.L. secretly continued the project under the supervision of Prof. Ahrens Parvis, by disguising it as therapy for Ifrit, intended to relieve the symptoms of her Oripathy. R.L. eventually failed to suppress Ifrit's rage, which almost led to the destruction of the lab and the subject's death.\cite{5} Since then, R.L. has concealed all details concerning the Crisis, and announced publicly that the incident was nothing more than an experimental accident. 
+    Of all the experiments R.L. has conducted, "Project Diabolic," launched in the year 1095, was its most defining. Under the supervision of the DOD, it acted as an investment partner for Haydn Pharmaceutical, which attempted to create a humanoid weapon by resurrecting the extinct Diablo Sarkaz.\cite{4} The result, however, was a series of devastating events known as the "Diabolic Crisis". It began with Ifrit, the experiment's test subject, losing control of her Arts and burning down laboratory Lab-1, killing its director Haydn Ramt. Following the destruction of Lab-1, R.L. secretly continued the project under the supervision of Prof. Ahrens Parvis, by disguising it as therapy for Ifrit, intended to relieve the symptoms of her Oripathy. R.L. eventually failed to suppress Ifrit's rage, which almost led to the destruction of the lab and the subject's death.\cite{5} Since then, R.L. has concealed all details concerning the Crisis, and announced publicly that the incident was nothing more than an experimental accident. 
 
-    R.L.'s inhumane experiments, as well as the disastrous Digbolic Crisis, have led two of its members, Dr. Olivia Silence and its co-founder, Saria, to leave R.L., though their positions are still nominally retained by Kristen. Even then, R.L. continues to supervise the two to prevent them from harming its interests; it also observes Ifrit in secret. At the same time, it has partnered with Rhodes Island to conduct research on Oripathy, while admitting to R.I.'s superiority in this field of research. Magallan, Mayer, and their superior Muelsyse are some of its members lending their services to R.I.
+    R.L.'s inhumane experiments, as well as the disastrous Diabolic Crisis, have led two of its members, Dr. Olivia Silence and its co-founder, Saria, to leave R.L., though their positions are still nominally retained by Kristen. Even then, R.L. continues to supervise the two to prevent them from harming its interests; it also observes Ifrit in secret. At the same time, it has partnered with Rhodes Island to conduct research on Oripathy, while admitting to R.I.'s superiority in this field of research. Magallan, Mayer, and their superior Muelsyse are some of its members lending their services to R.I.
 
     In November 21, 1099, the "Project Horizon Arc“ was officially launched as part of R.L.'s collaboration with the DOD. Originally a superweapons program with the purpose of constructing Arc-01, it was soon hijacked by R.L. itself as part of Kristen's ultimate lifetime goal. In the end, R.L. succeeded in penetrating the Starpod—the "fake sky" of Terra—and created a unique phenomenon named the "Trimount Arc" by later generations. Despite R.L. ultimately losing Kristen, the event became the current generation of Terra's first attempt to fly beyond the Starpod, marking the very beginning of space expedition in the current era. 
 
